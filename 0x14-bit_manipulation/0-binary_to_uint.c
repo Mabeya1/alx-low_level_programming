@@ -13,14 +13,14 @@
 unsigned int binary_to_uint(const char *b)
 {
 		unsigned int result = 0;
-		int g;
+		int i;
 
 		if (!b)
 				return (0);
 
-		for (g = 0; b[g]; g++)
+		for (i = 0; b[i]; i++)
 		{
-				if (b[g] < '0' || b[g] > '1')
+				if (b[i] < '0' || b[i] > '1')
 						return (0);
 
 				result = 2 * result + (b[i] - '0');/*Addition of Binary digit*/
