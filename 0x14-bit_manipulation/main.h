@@ -1,6 +1,7 @@
 #ifndef MAIN_H
-#define MAIN_H /* Include guard to prevent double inclusion */
-/* Function to convert binary string to an unsigned integer */
+#define MAIN_H
+
+/*Function to convert binary string to an unsigned integer*/
 unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
 int get_bit(unsigned long int n, unsigned int index);
