@@ -9,16 +9,16 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-		int bit, count = 0;
-		unsigned long int xor_result = n ^ m;
+	int bit, count = 0;
+	unsigned long int xor_result = n ^ m;
 
-		for (bit = 63; bit >= 0; bit--)
+	for (bit = 63; bit >= 0; bit--)
+	{
+		if (xor_result & (1UL << bit))
 		{
-				if (xor_result & (1UL << bit))
-				{
-						count++;
-				}
+			count++;
 		}
+	}
 
-		return (count);
+	return (count);
 }

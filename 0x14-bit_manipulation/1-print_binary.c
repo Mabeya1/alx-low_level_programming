@@ -12,19 +12,20 @@
  */
 void print_binary(unsigned long int n)
 {
-		int bit, count = 0;
-		unsigned long int mask;
+	int bit, count = 0;
+	unsigned long int mask;
 
-		for (bit = 63; bit >= 0; bit--)
+	for (bit = 63; bit >= 0; bit--)
+	{
+		mask = n >> bit;
+		if (mask & 1)
 		{
-				mask = n >> bit;
-				if (mask & 1)
-				{
-						_putchar('1');
-						count++;				}
-				else if (mask)
-						_putchar('0');
+			_putchar('1');
+			count++; /* continue as long as conditions satisfy*/
 		}
-		if (!mask)
-				_putchar('0');
+		else if (mask)
+			_putchar('0');
+	}
+	if (!mask)
+		_putchar('0');
 }
